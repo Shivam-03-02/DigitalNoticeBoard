@@ -1,68 +1,26 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>New Tab with Widgets</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div class="widget-container">
-    <h1>Welcome to Your New Tab</h1>
-    <div class="widget" id="google-slides-widget"> -->
-      <!-- Google Slides iframe will be inserted here -->
-    <!-- </div>
-  </div>
-  <script src="script.js"></script>
-</body>
-</html> -->
-
-<!-- <!DOCTYPE html>
-<html>
-<head>
-    <title>My Extension Popup</title>
-    <link rel="stylesheet" href="styles.css">
-    
-</head>
-<body>
-    <h3>Google Slides Presentation</h3>
-    <div id="link-container"></div>
-    <script src="script.js"></script>
-</body>
-</html> -->
-
-
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>My Extension New Tab</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* iframe {
-            width: 100%; */
-         /* Adjust the height as needed */
-            /* border: none;
-        } */
-        #components-container {
-    width: 100%;
-   height:100vh;
-}
-
-    </style>
 </head>
 <body>
     <h1>Welcome to My Extension</h1>
     <div id="components-container">
-        <!-- Your various components here -->
-        <!-- <div class="component">Component 1</div>
-        <div class="component">Component 2</div> -->
-        <!-- Add more components as needed -->
+        <!-- Google Slides widget area -->
+        <div class="slides-widget" id="slides-widget-area">
+            <!-- Google Slides iframe will be inserted here by script.js -->
+        </div>
     </div>
-    <h3>Google Sheets Presentation</h3>
-    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTpR4ExJIJt1dO-IS73DywYXBpKZJLIdsYcNIBiL4e6S5DyuvO1qE_uwvMyzYZPFVKNSlO2Wb0gjZi8/embed?start=false&loop=false&delayms=3000" style="width: 100%; height: 100%; border: none;" frameborder="0"  mozallowfullscreen="true" webkitallowfullscreen="true"></iframe> 
 
+    <div id="spotify-widget-area">
+        <input type="text" id="spotify-playlist-id" placeholder="Enter Spotify Playlist ID" />
+        <button id="save-button">Save</button>
+        <div id="spotify-widget-container">
+            <div id="spotify-widget"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
