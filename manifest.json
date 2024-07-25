@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "Widget New Tab",
+    "version": "1.0",
+    "description": "Displays widgets like Google Slides on the new tab page.",
+    "chrome_url_overrides": {
+      "newtab": "index.html"
+    },
+    "permissions": ["storage"],
+    "action": {
+      "default_popup": "index.html"
+    }
+  }
+  
