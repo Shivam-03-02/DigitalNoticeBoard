@@ -1,14 +1,11 @@
 {
-    "manifest_version": 3,
-    "name": "DigitalNoticeBoard",
-    "version": "1.0",
-    "description": "Digital Notice Board to keep track of activites in our organization",
-    "chrome_url_overrides": {
-      "newtab": "index.html"
-    },
-    "permissions": ["storage"],
-    "action": {
-      "default_popup": "index.html"
-    }
-  }
+  "manifest_version": 3,
+  "name": "Chrome Extension",
+  "version": "1.0",
+  "description": "Displays various components and Google Sheets on the new tab page.",
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "permissions": ["storage"]
   
+}
