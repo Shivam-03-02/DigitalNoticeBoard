@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "Widget New Tab",
+    "name": "DigitalNoticeBoard",
     "version": "1.0",
-    "description": "Displays widgets like Google Slides on the new tab page.",
+    "description": "Digital Notice Board to keep track of activites in our organization",
     "chrome_url_overrides": {
       "newtab": "index.html"
     },
