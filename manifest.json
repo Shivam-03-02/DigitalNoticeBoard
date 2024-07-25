@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "Widget New Tab",
+    "name": "Chrome Extension",
     "version": "1.0",
     "description": "Displays widgets like Google Slides on the new tab page.",
     "chrome_url_overrides": {
