@@ -47,6 +47,7 @@ iframe {
 #widgets-row {
   display: flex;
   justify-content: space-between;
+  align-items: center; /* Ensure alignment in the center */
   width: 100%;
 }
 
