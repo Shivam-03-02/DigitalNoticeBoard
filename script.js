@@ -46,4 +46,62 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
     });
+
+    // Pomodoro Timer functionality
+    let timerInterval;
+    let isRunning = false;
+    let minutes = 25;
+    let seconds = 0;
+
+    function updateTimerDisplay() {
+        const timerDisplay = document.getElementById('timer-display');
+        timerDisplay.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+    }
+
+    function startTimer() {
+        timerInterval = setInterval(function () {
+            if (seconds === 0) {
+                if (minutes === 0) {
+                    clearInterval(timerInterval);
+                    isRunning = false;
+                    document.getElementById('start-stop-button').textContent = 'Start';
+                    alert('Time is up!');
+                    return;
+                }
+                minutes--;
+                seconds = 59;
+            } else {
+                seconds--;
+            }
+            updateTimerDisplay();
+        }, 1000);
+    }
+
+    function resetTimer() {
+        clearInterval(timerInterval);
+        isRunning = false;
+        minutes = 25;
+        seconds = 0;
+        updateTimerDisplay();
+        document.getElementById('start-stop-button').textContent = 'Start';
+    }
+
+    document.getElementById('start-stop-button').addEventListener('click', function () {
+        if (isRunning) {
+            clearInterval(timerInterval);
+            isRunning = false;
+            this.textContent = 'Start';
+        } else {
+            startTimer();
+            isRunning = true;
+            this.textContent = 'Stop';
+        }
+    });
+
+    document.getElementById('reset-button').addEventListener('click', function () {
+        resetTimer();
+    });
+
+    // Initialize timer display
+    updateTimerDisplay();
 });
