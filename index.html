@@ -1,8 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Extension New Tab</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -10,26 +8,24 @@
     <h1>Welcome to My Extension</h1>
 
     <!-- Pomodoro Timer -->
-    <div class="widget-container">
-        <div class="widget" id="pomodoro-timer">
-            <div id="timer-display">25:00</div>
-            <button id="start-stop-button">Start</button>
-            <button id="reset-button">Reset</button>
-        </div>
+    <div id="pomodoro-timer" class="widget">
+        <div id="timer-display">25:00</div>
+        <button id="start-stop-button">Start</button>
+        <button id="reset-button">Reset</button>
     </div>
 
     <!-- Spotify Widget -->
-    <div class="widget-container">
-        <div class="widget" id="spotify-widget-area">
-            <input type="text" id="spotify-playlist-id" placeholder="Enter Spotify Playlist ID" />
-            <button id="save-button">Save</button>
+    <div id="spotify-widget-area" class="widget">
+        <input type="text" id="spotify-playlist-id" placeholder="Enter Spotify Playlist ID" />
+        <button id="save-button">Save</button>
+        <div id="spotify-widget-container">
             <div id="spotify-widget"></div>
         </div>
     </div>
 
     <!-- Google Slides Widget -->
-    <div class="widget-container">
-        <div class="widget" id="slides-widget-area">
+    <div id="components-container" class="widget">
+        <div class="slides-widget" id="slides-widget-area">
             <!-- Google Slides iframe will be inserted here by script.js -->
         </div>
     </div>
