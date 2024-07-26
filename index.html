@@ -7,25 +7,26 @@
 <body>
     <h1>Welcome to My Extension</h1>
 
-    <!-- Pomodoro Timer -->
-    <div id="pomodoro-timer" class="widget">
-        <div id="timer-display">25:00</div>
-        <button id="start-stop-button">Start</button>
-        <button id="reset-button">Reset</button>
-    </div>
+    <!-- Container for Widgets -->
+    <div id="widgets-row">
+        <!-- Pomodoro Timer -->
+        <div id="pomodoro-timer" class="widget">
+            <div id="timer-display">25:00</div>
+            <button id="start-stop-button">Start</button>
+            <button id="reset-button">Reset</button>
+        </div>
 
-    <!-- Spotify Widget -->
-    <div id="spotify-widget-area" class="widget">
-        <input type="text" id="spotify-playlist-id" placeholder="Enter Spotify Playlist ID" />
-        <button id="save-button">Save</button>
-        <div id="spotify-widget-container">
+        <!-- Spotify Widget -->
+        <div id="spotify-widget-container" class="widget">
+            <input type="text" id="spotify-playlist-id" placeholder="Enter Spotify Playlist ID" />
+            <button id="save-button">Save</button>
             <div id="spotify-widget"></div>
         </div>
     </div>
 
     <!-- Google Slides Widget -->
-    <div id="components-container" class="widget">
-        <div class="slides-widget" id="slides-widget-area">
+    <div id="components-container">
+        <div class="widget" id="slides-widget-area">
             <!-- Google Slides iframe will be inserted here by script.js -->
         </div>
     </div>

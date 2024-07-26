@@ -5,58 +5,77 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   height: 100vh;
-  background-color: #f0f0f0;
+  overflow: hidden; /* Prevent scrolling */
+  background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradient background */
+  background-size: cover;
+  color: #fff; /* White text color for better contrast */
 }
 
 h1 {
-  margin: 20px 0;
-  color: #333;
+  margin-bottom: 20px;
+  color: #fff;
 }
 
 .widget-container {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 80%;
   margin-bottom: 20px;
 }
 
 .widget {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin-bottom: 20px;
+  width: 100%;
+  text-align: center; /* Center align text in widgets */
+  color: #fff; /* White text color for better contrast */
 }
 
 iframe {
   border: none;
   width: 100%;
-  height: 500px;
+  height: 400px; /* Adjust height to fit screen */
   border-radius: 8px;
 }
 
-#pomodoro-timer {
+#widgets-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#pomodoro-timer, #spotify-widget-container {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 20px;
+  margin: 10px;
 }
 
 #timer-display {
   font-size: 3em;
   margin-bottom: 20px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 10px 20px;
+  border-radius: 10px;
 }
 
 button {
-  padding: 10px 20px;
-  margin: 5px;
+  padding: 10px 20px; /* Smaller padding for buttons */
+  margin: 10px;
   border: none;
   border-radius: 5px;
   background-color: #007bff;
   color: white;
   cursor: pointer;
-  font-size: 1em;
+  font-size: 1em; /* Smaller font size for buttons */
 }
 
 button:hover {
@@ -64,32 +83,15 @@ button:hover {
 }
 
 input {
-  padding: 10px;
-  margin: 5px;
+  padding: 10px; /* Smaller padding for input */
+  margin: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 1em;
+  font-size: 1em; /* Smaller font size for input */
+  width: 100%; /* Full width for input */
 }
 
 input:focus {
   outline: none;
   border-color: #007bff;
-}
-
-#spotify-widget-area {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  margin-bottom: 20px;
-}
-
-#spotify-widget-container {
-  width: 100%;
-}
-
-#components-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 80%;
 }
